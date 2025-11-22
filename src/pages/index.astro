@@ -4,14 +4,13 @@ import Logo from '../components/Logo.astro';
 import '../styles/global.css';
 import arrowIcon from '../assets/flecha.jpeg';
 
-const SITE_TITLE = 'GTVMOTOR | Próximamente nueva plataforma';
+const SITE_TITLE = 'GTVMOTOR | Web en construcción';
 const SITE_DESCRIPTION =
-	'Plataforma de movilidad y gestión de vehículos: compra, venta, alquiler y servicios para empresas y particulares en España, Europa y Reino Unido. Muy pronto, nueva experiencia digital.';
+	'Soluciones de movilidad premium para España, Europa y Reino Unido. Muy pronto con nueva presencia digital.';
 
 const CONTACT_EMAIL = 'hola@gtvmotor.es';
 const CONTACT_PHONE = '+44 7394 329184';
-const WHATSAPP_LINK =
-	'https://wa.me/447394329184?text=Hola,%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20GTVMOTOR.%20%C2%BFPodemos%20hablar%3F';
+const WHATSAPP_LINK = 'https://wa.me/447394329184?text=Hola,%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20GTVMOTOR.%20%C2%BFPodemos%20hablar%3F';
 
 const CONTACT_EMAIL_UK = 'hello@gtvmotor.es';
 const CONTACT_PHONE_UK = '+44 7394 329184';
@@ -24,242 +23,220 @@ const currentYear = new Date().getFullYear();
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} lang="es">
-	<div class="relative w-full space-y-8 text-left mobile-lg:space-y-12 tablet:space-y-16">
-		<div class="pointer-events-none absolute inset-x-0 -top-24 mobile-sm:-top-32 -z-10 mx-auto h-[24rem] mobile-sm:h-[32rem] max-w-4xl">
+	<div class="relative w-full space-y-10 text-left md:space-y-16">
+		<div class="pointer-events-none absolute inset-x-0 -top-28 -z-10 mx-auto h-[26rem] max-w-4xl md:-top-32 md:h-[32rem]">
 			<div class="h-full w-full rounded-full bg-emerald-500/20 blur-3xl"></div>
 		</div>
 
-		<section class="rounded-2xl mobile-sm:rounded-[32px] border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-4 mobile-sm:p-6 mobile-lg:p-8 tablet:p-12 shadow-2xl backdrop-blur">
-			<div class="grid gap-6 mobile-lg:gap-8 tablet-lg:gap-10 tablet-lg:grid-cols-[3fr,2fr]">
-				<div class="flex flex-col gap-4 mobile-sm:gap-5 mobile-lg:gap-6 text-white">
-					<div class="flex flex-wrap items-center gap-2 mobile-sm:gap-3 text-[0.6rem] mobile-sm:text-xs uppercase tracking-[0.2em] mobile-sm:tracking-[0.35em] text-white/60">
-						<span class="inline-flex items-center gap-1.5 mobile-sm:gap-2 rounded-full border border-white/20 px-2.5 mobile-sm:px-4 py-1 text-[0.6rem] mobile-sm:text-[0.65rem] font-semibold tracking-[0.15em] mobile-sm:tracking-[0.25em] text-emerald-300">
+		<section class="rounded-[28px] border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-6 shadow-2xl backdrop-blur sm:rounded-[32px] sm:p-8 md:p-12">
+			<div class="grid gap-8 md:grid-cols-[3fr,2fr] md:items-start md:gap-12">
+				<div class="flex flex-col gap-6 text-white max-w-[85%] mx-auto md:max-w-none md:mx-0">
+					<div class="flex flex-wrap items-center gap-3 text-[0.65rem] uppercase tracking-[0.3em] text-white/60">
+						<span class="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-1 font-semibold text-emerald-300">
 							Estamos renovando nuestra plataforma
 						</span>
-						<span class="text-[0.6rem] mobile-sm:text-[0.65rem]">Multi-market mobility partner</span>
+						<span class="text-[0.62rem] tracking-[0.18em] text-white/70">Multi-market mobility partner</span>
 					</div>
-					<div class="space-y-3 mobile-sm:space-y-4">
-						<div class="flex flex-wrap items-center gap-3 mobile-sm:gap-4">
-							<div class="[&_div]:h-20 [&_div]:w-20 mobile-sm:[&_div]:h-24 mobile-sm:[&_div]:w-24 mobile-lg:[&_div]:h-36 mobile-lg:[&_div]:w-36">
-								<Logo size="md" useAsset assetPath="/logo.png" />
-							</div>
-							<p class="text-xs mobile-sm:text-sm uppercase tracking-[0.3em] mobile-sm:tracking-[0.4em] text-white/70">NUEVA WEB EN CAMINO</p>
+					<div class="space-y-4">
+						<div class="flex flex-wrap items-center gap-4">
+							<Logo size="md" useAsset assetPath="/logo.png" />
+							<p class="text-xs uppercase tracking-[0.35em] text-white/70 md:text-sm">Nueva web en camino</p>
 						</div>
-						<h1 class="text-balance text-2xl mobile-sm:text-3xl font-semibold leading-tight mobile-lg:text-4xl tablet:text-5xl">
+						<h1 class="text-3xl font-semibold leading-tight text-white md:text-5xl">
 							Compra, alquiler y gestión de vehículos sin fricción.
 						</h1>
-						<p class="text-sm mobile-sm:text-base text-white/80 mobile-lg:text-lg leading-relaxed">
+						<p class="text-base leading-relaxed text-white/80 md:text-lg">
 							Estamos construyendo una plataforma pensada para clientes exigentes y partners de confianza en España, Europa y Reino Unido. Hasta entonces, nuestro equipo te acompaña de forma directa y personalizada.
 						</p>
-						<ul class="space-y-1.5 mobile-sm:space-y-2 text-xs mobile-sm:text-sm text-white/70 leading-relaxed">
+						<ul class="space-y-2 text-sm text-white/70">
 							<li class="flex items-start gap-2">
-								<span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400/60"></span>
+								<span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
 								<span>Gestión integral de compra y venta de vehículos.</span>
 							</li>
 							<li class="flex items-start gap-2">
-								<span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400/60"></span>
+								<span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
 								<span>Alquiler flexible para empresas y particulares.</span>
 							</li>
 							<li class="flex items-start gap-2">
-								<span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400/60"></span>
-								<span>Acompañamiento bilingüe para clientes internacionales y partners.</span>
+								<span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+								<span>Centro de lavado manual.</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+								<span>Acompañamiento bilingüe para partners internacionales.</span>
 							</li>
 						</ul>
 					</div>
-					<div class="flex flex-col mobile-sm:flex-row flex-wrap gap-2.5 mobile-sm:gap-3 text-sm">
-				<a
-					href={`mailto:${CONTACT_EMAIL}`}
-					class="group flex items-center justify-between gap-3 mobile-sm:gap-4 rounded-xl mobile-sm:rounded-2xl border border-white/20 bg-white/5 px-4 mobile-sm:px-6 py-3.5 mobile-sm:py-4 font-semibold text-white transition hover:border-white/40 hover:bg-white/15 min-h-[44px]"
-				>
-					<span class="flex flex-col text-left flex-1 min-w-0">
-						<span class="text-[0.65rem] mobile-sm:text-xs uppercase tracking-[0.25em] mobile-sm:tracking-[0.35em] text-white/80">Agendar una llamada</span>
-						<span class="text-[0.7rem] mobile-sm:text-[0.72rem] font-normal text-white/60 truncate">Respondemos en menos de 24h laborables</span>
-					</span>
-					<span class="inline-flex h-9 mobile-sm:h-10 w-9 mobile-sm:w-10 shrink-0 items-center justify-center rounded-full bg-white text-gtvgray shadow-lg shadow-white/20 transition group-hover:translate-x-1">
-						<img
-							src={arrowIcon.src}
-							width={arrowIcon.width}
-							height={arrowIcon.height}
-							alt="Flecha contacto"
-							class="h-3.5 mobile-sm:h-4 w-3.5 mobile-sm:w-4 object-contain"
-							loading="lazy"
-						/>
-					</span>
-				</a>
-					<a
-						href={WHATSAPP_LINK}
-						class="group flex items-center justify-center gap-2 rounded-xl mobile-sm:rounded-2xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600 px-5 mobile-sm:px-6 py-3 mobile-sm:py-3.5 font-semibold text-white shadow-lg shadow-emerald-500/30 transition hover:translate-y-0.5 min-h-[44px] text-sm mobile-sm:text-base"
-						target="_blank"
-						rel="noreferrer"
-						aria-label="WhatsApp directo España"
-					>
-						<svg viewBox="0 0 32 32" class="h-4.5 mobile-sm:h-5 w-4.5 mobile-sm:w-5" fill="currentColor" aria-hidden="true">
-							<path d="M16 1.7c-7.8 0-14.2 6.3-14.2 14.1 0 2.5.7 4.9 1.9 7L2 30.6l8.1-2.1c2 1.1 4.3 1.7 6.7 1.7 7.8 0 14.2-6.4 14.2-14.2 0-3.8-1.5-7.3-4.1-10A13.92 13.92 0 0 0 16 1.7zm7.9 20c-.3.9-2 1.9-2.8 2-.7.1-1.6.1-2.6-.2-.6-.2-1.3-.4-2.3-.9-4.1-1.8-6.8-5.9-7-6.2-.2-.3-1.7-2.2-1.7-4.2 0-2 .6-3.1.9-3.5.4-.4.8-.5 1.1-.5H11c.3 0 .6 0 .8.7.3.8 1.2 2.8 1.3 3 .1.2.2.4 0 .7l-.4.7c-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8s1.1 1.9 2.3 2.9c1.6 1.4 2.9 1.9 3.3 2.1.4.2.6.2.9-.1.3-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.3 1.1 2.7 1.3.4.2.7.3.8.4.1.2.1 1-.3 1.9z" />
-						</svg>
-						<span class="hidden mobile-sm:inline">WhatsApp directo</span>
-						<span class="mobile-sm:hidden">WhatsApp</span>
-					</a>
+					<div class="flex flex-col gap-3 text-sm sm:flex-row">
+						<a
+							href={`mailto:${CONTACT_EMAIL}`}
+							class="group flex w-full items-center justify-between gap-4 rounded-2xl border border-white/20 bg-white/5 px-5 py-4 font-semibold text-white transition hover:border-white/40 hover:bg-white/15 sm:flex-1"
+						>
+							<span class="flex flex-col text-left">
+								<span class="text-xs uppercase tracking-[0.35em] text-white/80">Agendar una llamada</span>
+								<span class="text-[0.75rem] font-normal text-white/60">Respondemos en menos de 24h laborables</span>
+							</span>
+							<span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-gtvgray shadow-lg shadow-white/20 transition group-hover:translate-x-1">
+								<img
+									src={arrowIcon.src}
+									width={arrowIcon.width}
+									height={arrowIcon.height}
+									alt="Flecha contacto"
+									class="h-4 w-4 object-contain"
+									loading="lazy"
+								/>
+							</span>
+						</a>
+						<a
+							href={WHATSAPP_LINK}
+							class="group flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600 px-5 py-4 font-semibold text-white shadow-lg shadow-emerald-500/30 transition hover:translate-y-0.5 sm:w-auto"
+							target="_blank"
+							rel="noreferrer"
+							aria-label="WhatsApp directo España"
+						>
+							<svg viewBox="0 0 32 32" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+								<path d="M16 1.7c-7.8 0-14.2 6.3-14.2 14.1 0 2.5.7 4.9 1.9 7L2 30.6l8.1-2.1c2 1.1 4.3 1.7 6.7 1.7 7.8 0 14.2-6.4 14.2-14.2 0-3.8-1.5-7.3-4.1-10A13.92 13.92 0 0 0 16 1.7zm7.9 20c-.3.9-2 1.9-2.8 2-.7.1-1.6.1-2.6-.2-.6-.2-1.3-.4-2.3-.9-4.1-1.8-6.8-5.9-7-6.2-.2-.3-1.7-2.2-1.7-4.2 0-2 .6-3.1.9-3.5.4-.4.8-.5 1.1-.5H11c.3 0 .6 0 .8.7.3.8 1.2 2.8 1.3 3 .1.2.2.4 0 .7l-.4.7c-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8s1.1 1.9 2.3 2.9c1.6 1.4 2.9 1.9 3.3 2.1.4.2.6.2.9-.1.3-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.3 1.1 2.7 1.3.4.2.7.3.8.4.1.2.1 1-.3 1.9z" />
+							</svg>
+							<span>WhatsApp directo</span>
+						</a>
+					</div>
 				</div>
-				</div>
-				<div class="relative rounded-2xl mobile-sm:rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-white/[0.02] p-5 mobile-sm:p-6 mobile-lg:p-8 text-white shadow-xl shadow-black/40 backdrop-blur-sm transition-all hover:border-white/20 hover:shadow-2xl hover:shadow-black/50">
-					<div class="absolute inset-0 rounded-2xl mobile-sm:rounded-3xl bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 hover:opacity-100"></div>
-					<div class="relative space-y-4 mobile-sm:space-y-5 mobile-lg:space-y-6">
-						<div class="space-y-2 mobile-sm:space-y-3">
-							<p class="text-[0.65rem] mobile-sm:text-xs font-semibold uppercase tracking-[0.25em] mobile-sm:tracking-[0.35em] text-gtvorange">Agenda inmediata</p>
-							<h2 class="text-xl mobile-sm:text-2xl font-semibold leading-tight">Tu equipo dedicado</h2>
-							<p class="text-xs mobile-sm:text-sm leading-relaxed text-white/75">
-								Trabajamos con un modelo consultivo: analizamos tu caso, te proponemos opciones claras y coordinamos cada paso contigo, sin fricción ni letra pequeña.
-							</p>
+				<div class="rounded-3xl border border-white/10 bg-white/5 p-6 text-white shadow-xl shadow-black/30 max-w-[85%] mx-auto md:max-w-none md:mx-0">
+					<p class="text-xs font-semibold uppercase tracking-[0.35em] text-gtvorange">Agenda inmediata</p>
+					<h2 class="mt-3 text-2xl font-semibold">Tu equipo dedicado</h2>
+					<p class="mt-2 text-sm leading-relaxed text-white/70">
+						Trabajamos con un modelo consultivo: analizamos tu caso, proponemos opciones claras y coordinamos cada paso contigo, sin fricción ni letra pequeña.
+					</p>
+					<dl class="mt-6 space-y-4 text-sm">
+						<div class="flex items-start justify-between gap-3">
+							<div>
+								<dt class="text-white/70">Correo</dt>
+								<dd class="font-semibold text-white break-all">{CONTACT_EMAIL}</dd>
+							</div>
+							<a href={`mailto:${CONTACT_EMAIL}`} class="text-xs uppercase tracking-[0.35em] text-emerald-300">
+								Responder
+							</a>
 						</div>
-						<div class="space-y-2.5 mobile-sm:space-y-3 border-t border-white/10 pt-4 mobile-sm:pt-5 mobile-lg:pt-6">
-							<div class="group flex flex-col mobile-sm:flex-row items-stretch mobile-sm:items-start justify-between gap-3 mobile-sm:gap-4 rounded-lg mobile-sm:rounded-xl border border-white/5 bg-white/[0.02] p-3 mobile-sm:p-4 transition-all hover:border-white/15 hover:bg-white/[0.05]">
-								<div class="flex-1 space-y-1 min-w-0">
-									<dt class="text-[0.65rem] mobile-sm:text-xs font-medium uppercase tracking-[0.15em] mobile-sm:tracking-[0.2em] text-white/60">Correo</dt>
-									<dd class="break-all text-sm mobile-sm:text-base font-semibold text-white">{CONTACT_EMAIL}</dd>
-								</div>
-								<a 
-									href={`mailto:${CONTACT_EMAIL}`} 
-									class="inline-flex items-center justify-center mobile-sm:justify-start gap-1.5 rounded-lg border border-emerald-400/30 bg-emerald-400/10 px-3 mobile-sm:px-4 py-2 text-[0.65rem] mobile-sm:text-xs font-semibold uppercase tracking-[0.2em] mobile-sm:tracking-[0.25em] text-emerald-300 transition-all hover:border-emerald-400/50 hover:bg-emerald-400/20 hover:text-emerald-200 hover:shadow-lg hover:shadow-emerald-400/20 min-h-[44px] shrink-0"
-								>
-									Escribir
-									<svg class="h-3 mobile-sm:h-3.5 w-3 mobile-sm:w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-									</svg>
-								</a>
+						<div class="flex items-start justify-between gap-3">
+							<div>
+								<dt class="text-white/70">WhatsApp</dt>
+								<dd class="font-semibold text-white">{CONTACT_PHONE}</dd>
 							</div>
-							<div class="group flex flex-col mobile-sm:flex-row items-stretch mobile-sm:items-start justify-between gap-3 mobile-sm:gap-4 rounded-lg mobile-sm:rounded-xl border border-white/5 bg-white/[0.02] p-3 mobile-sm:p-4 transition-all hover:border-white/15 hover:bg-white/[0.05]">
-								<div class="flex-1 space-y-1 min-w-0">
-									<dt class="text-[0.65rem] mobile-sm:text-xs font-medium uppercase tracking-[0.15em] mobile-sm:tracking-[0.2em] text-white/60">WhatsApp</dt>
-									<dd class="text-sm mobile-sm:text-base font-semibold text-white">{CONTACT_PHONE}</dd>
-								</div>
-								<a
-									href={WHATSAPP_LINK}
-									class="inline-flex items-center justify-center mobile-sm:justify-start gap-1.5 rounded-lg border border-emerald-400/30 bg-emerald-400/10 px-3 mobile-sm:px-4 py-2 text-[0.65rem] mobile-sm:text-xs font-semibold uppercase tracking-[0.2em] mobile-sm:tracking-[0.25em] text-emerald-300 transition-all hover:border-emerald-400/50 hover:bg-emerald-400/20 hover:text-emerald-200 hover:shadow-lg hover:shadow-emerald-400/20 min-h-[44px] shrink-0"
-									target="_blank"
-									rel="noreferrer"
-								>
-									Abrir chat
-									<svg class="h-3 mobile-sm:h-3.5 w-3 mobile-sm:w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-									</svg>
-								</a>
-							</div>
+							<a href={WHATSAPP_LINK} class="text-xs uppercase tracking-[0.35em] text-emerald-300" target="_blank" rel="noreferrer">
+								Abrir chat
+							</a>
 						</div>
-						<div class="space-y-2 mobile-sm:space-y-2.5 border-t border-white/10 pt-4 mobile-sm:pt-5 mobile-lg:pt-6">
-							<div class="flex items-start gap-2.5 mobile-sm:gap-3 rounded-lg p-2 mobile-sm:p-2.5 transition-colors hover:bg-white/[0.03]">
-								<span class="mt-0.5 h-1.5 mobile-sm:h-2 w-1.5 mobile-sm:w-2 shrink-0 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400/50"></span>
-								<span class="text-xs mobile-sm:text-sm leading-relaxed text-white/75">Atención especializada en el sector de automoción.</span>
-							</div>
-							<div class="flex items-start gap-2.5 mobile-sm:gap-3 rounded-lg p-2 mobile-sm:p-2.5 transition-colors hover:bg-white/[0.03]">
-								<span class="mt-0.5 h-1.5 mobile-sm:h-2 w-1.5 mobile-sm:w-2 shrink-0 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400/50"></span>
-								<span class="text-xs mobile-sm:text-sm leading-relaxed text-white/75">Seguimiento personalizado de cada operación.</span>
-							</div>
-							<div class="flex items-start gap-2.5 mobile-sm:gap-3 rounded-lg p-2 mobile-sm:p-2.5 transition-colors hover:bg-white/[0.03]">
-								<span class="mt-0.5 h-1.5 mobile-sm:h-2 w-1.5 mobile-sm:w-2 shrink-0 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400/50"></span>
-								<span class="text-xs mobile-sm:text-sm leading-relaxed text-white/75">Compromiso total con el cliente y los plazos acordados.</span>
-					</div>
-					</div>
-					</div>
+					</dl>
+					<ul class="mt-6 space-y-2 text-sm text-white/70">
+						<li class="flex items-start gap-2">
+							<span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+							<span>Atención especializada en el sector automoción.</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+							<span>Seguimiento personalizado de cada operación.</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+							<span>Compromiso total con los plazos acordados.</span>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</section>
 
-		<section class="space-y-4 mobile-sm:space-y-5 mobile-lg:space-y-6">
-			<div class="flex flex-col gap-1.5 mobile-sm:gap-2 text-white">
-				<p class="text-[0.65rem] mobile-sm:text-xs font-semibold uppercase tracking-[0.25em] mobile-sm:tracking-[0.3em] text-gtvorange">Operamos donde nos necesitas</p>
-				<h2 class="text-2xl mobile-sm:text-3xl font-semibold">Centros de atención directa</h2>
-				<p class="text-xs mobile-sm:text-sm text-white/70 leading-relaxed">
+		<section class="space-y-5">
+			<div class="flex flex-col gap-2 text-white">
+				<p class="text-xs font-semibold uppercase tracking-[0.3em] text-gtvorange">Operamos donde nos necesitas</p>
+				<h2 class="text-2xl font-semibold md:text-3xl">Centros de atención directa</h2>
+				<p class="text-sm text-white/70 md:text-base">
 					Coordinamos equipos especializados para España, Europa y Reino Unido, conectando operaciones locales con una visión internacional.
 				</p>
 			</div>
-			<div class="grid gap-4 mobile-sm:gap-5 mobile-lg:gap-6 tablet:grid-cols-2">
-			<article class="rounded-2xl mobile-sm:rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-white/0 p-4 mobile-sm:p-5 mobile-lg:p-6 shadow-xl backdrop-blur">
-				<p class="text-[0.65rem] mobile-sm:text-xs font-semibold uppercase tracking-[0.25em] mobile-sm:tracking-[0.3em] text-gtvorange">
-					España · Europa
-				</p>
-				<h2 class="mt-2 mobile-sm:mt-3 text-xl mobile-sm:text-2xl font-semibold text-white">Centro integral</h2>
-				<p class="mt-1.5 mobile-sm:mt-2 text-xs mobile-sm:text-sm text-white/70 leading-relaxed">
-					Gestión de compra y venta de vehículos, alquiler bajo demanda y soluciones para flotas corporativas y pymes que necesitan movilidad sin complicaciones.
-				</p>
-				<ul class="mt-4 mobile-sm:mt-5 mobile-lg:mt-6 space-y-1.5 mobile-sm:space-y-2 text-xs mobile-sm:text-sm text-white/80">
-					<li>
-						<strong class="font-semibold text-white">Correo:</strong> <span class="break-all">{CONTACT_EMAIL}</span>
-					</li>
-					<li>
-						<strong class="font-semibold text-white">Teléfono:</strong> {CONTACT_PHONE}
-					</li>
-				</ul>
-				<div class="mt-4 mobile-sm:mt-5 mobile-lg:mt-6 flex flex-wrap gap-2.5 mobile-sm:gap-3">
-					<a
-						href={`mailto:${CONTACT_EMAIL}`}
-						class="rounded-xl mobile-sm:rounded-2xl border border-white/20 px-4 mobile-sm:px-5 py-2 text-xs mobile-sm:text-sm font-medium text-white transition hover:border-gtvorange hover:text-gtvorange min-h-[44px] flex items-center"
-					>
-						Escríbenos
-					</a>
-					<a
-						href={WHATSAPP_LINK}
-						class="group flex h-11 mobile-sm:h-12 w-11 mobile-sm:w-12 items-center justify-center rounded-xl mobile-sm:rounded-2xl bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 text-white shadow-lg shadow-emerald-500/30 transition hover:-translate-y-0.5"
-						target="_blank"
-						rel="noreferrer"
-						aria-label="WhatsApp directo España"
-					>
-						<svg viewBox="0 0 32 32" class="h-4.5 mobile-sm:h-5 w-4.5 mobile-sm:w-5" fill="currentColor" aria-hidden="true">
-							<path
-								d="M16 1.7c-7.8 0-14.2 6.3-14.2 14.1 0 2.5.7 4.9 1.9 7L2 30.6l8.1-2.1c2 1.1 4.3 1.7 6.7 1.7 7.8 0 14.2-6.4 14.2-14.2 0-3.8-1.5-7.3-4.1-10A13.92 13.92 0 0 0 16 1.7zm7.9 20c-.3.9-2 1.9-2.8 2-.7.1-1.6.1-2.6-.2-.6-.2-1.3-.4-2.3-.9-4.1-1.8-6.8-5.9-7-6.2-.2-.3-1.7-2.2-1.7-4.2 0-2 .6-3.1.9-3.5.4-.4.8-.5 1.1-.5H11c.3 0 .6 0 .8.7.3.8 1.2 2.8 1.3 3 .1.2.2.4 0 .7l-.4.7c-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8s1.1 1.9 2.3 2.9c1.6 1.4 2.9 1.9 3.3 2.1.4.2.6.2.9-.1.3-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.3 1.1 2.7 1.3.4.2.7.3.8.4.1.2.1 1-.3 1.9z"
+			<div class="grid gap-5 md:grid-cols-2">
+				<article class="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-white/0 p-5 shadow-xl backdrop-blur">
+					<p class="text-xs font-semibold uppercase tracking-[0.3em] text-gtvorange">España · Europa</p>
+					<h3 class="mt-3 text-2xl font-semibold text-white">Centro integral</h3>
+					<p class="mt-2 text-sm leading-relaxed text-white/70">
+						Gestión de compra y venta de vehículos, alquiler bajo demanda y soluciones para flotas corporativas y pymes que necesitan movilidad sin complicaciones.
+					</p>
+					<ul class="mt-5 space-y-2 text-sm text-white/80">
+						<li>
+							<strong class="font-semibold text-white">Correo:</strong> <span class="break-all">{CONTACT_EMAIL}</span>
+						</li>
+						<li>
+							<strong class="font-semibold text-white">Teléfono:</strong> {CONTACT_PHONE}
+						</li>
+					</ul>
+					<div class="mt-6 flex flex-wrap gap-3">
+						<a
+							href={`mailto:${CONTACT_EMAIL}`}
+							class="rounded-2xl border border-white/20 px-5 py-2 text-sm font-medium text-white transition hover:border-gtvorange hover:text-gtvorange"
+						>
+							Escríbenos
+						</a>
+						<a
+							href={WHATSAPP_LINK}
+							class="group flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 text-white shadow-lg shadow-emerald-500/30 transition hover:-translate-y-0.5"
+							target="_blank"
+							rel="noreferrer"
+							aria-label="WhatsApp directo España"
+						>
+							<svg viewBox="0 0 32 32" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+								<path
+									d="M16 1.7c-7.8 0-14.2 6.3-14.2 14.1 0 2.5.7 4.9 1.9 7L2 30.6l8.1-2.1c2 1.1 4.3 1.7 6.7 1.7 7.8 0 14.2-6.4 14.2-14.2 0-3.8-1.5-7.3-4.1-10A13.92 13.92 0 0 0 16 1.7zm7.9 20c-.3.9-2 1.9-2.8 2-.7.1-1.6.1-2.6-.2-.6-.2-1.3-.4-2.3-.9-4.1-1.8-6.8-5.9-7-6.2-.2-.3-1.7-2.2-1.7-4.2 0-2 .6-3.1.9-3.5.4-.4.8-.5 1.1-.5H11c.3 0 .6 0 .8.7.3.8 1.2 2.8 1.3 3 .1.2.2.4 0 .7l-.4.7c-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8s1.1 1.9 2.3 2.9c1.6 1.4 2.9 1.9 3.3 2.1.4.2.6.2 .9-.1.3-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.3 1.1 2.7 1.3.4.2.7.3.8.4.1.2.1 1-.3 1.9z"
 							/>
-						</svg>
-						<span class="sr-only">WhatsApp España</span>
-					</a>
-				</div>
-			</article>
+							</svg>
+							<span class="sr-only">WhatsApp España</span>
+						</a>
+					</div>
+				</article>
 
-			<article class="rounded-2xl mobile-sm:rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-white/0 p-4 mobile-sm:p-5 mobile-lg:p-6 shadow-xl backdrop-blur">
-				<p class="text-[0.65rem] mobile-sm:text-xs font-semibold uppercase tracking-[0.25em] mobile-sm:tracking-[0.3em] text-gtvorange">
-					United Kingdom
-				</p>
-				<h2 class="mt-2 mobile-sm:mt-3 text-xl mobile-sm:text-2xl font-semibold text-white">UK Partners Hub</h2>
-				<p class="mt-1.5 mobile-sm:mt-2 text-xs mobile-sm:text-sm text-white/70 leading-relaxed">
-					If you are a partner, fleet operator or investor in the UK, we connect you with our local business development team to explore opportunities and tailored projects.
-				</p>
-				<ul class="mt-4 mobile-sm:mt-5 mobile-lg:mt-6 space-y-1.5 mobile-sm:space-y-2 text-xs mobile-sm:text-sm text-white/80">
-					<li>
-						<strong class="font-semibold text-white">Email:</strong> <span class="break-all">{CONTACT_EMAIL_UK}</span>
-					</li>
-					<li>
-						<strong class="font-semibold text-white">Phone:</strong> {CONTACT_PHONE_UK}
-					</li>
-				</ul>
-				<div class="mt-4 mobile-sm:mt-5 mobile-lg:mt-6 flex flex-wrap gap-2.5 mobile-sm:gap-3">
-					<a
-						href={`mailto:${CONTACT_EMAIL_UK}`}
-						class="rounded-xl mobile-sm:rounded-2xl border border-white/20 px-4 mobile-sm:px-5 py-2 text-xs mobile-sm:text-sm font-medium text-white transition hover:border-gtvorange hover:text-gtvorange min-h-[44px] flex items-center"
-					>
-						Email team
-					</a>
-					<a
-						href={WHATSAPP_LINK_UK}
-						class="group flex h-11 mobile-sm:h-12 w-11 mobile-sm:w-12 items-center justify-center rounded-xl mobile-sm:rounded-2xl bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 text-white shadow-lg shadow-emerald-500/30 transition hover:-translate-y-0.5"
-						target="_blank"
-						rel="noreferrer"
-						aria-label="WhatsApp directo UK"
-					>
-						<svg viewBox="0 0 32 32" class="h-4.5 mobile-sm:h-5 w-4.5 mobile-sm:w-5" fill="currentColor" aria-hidden="true">
-							<path
-								d="M16 1.7c-7.8 0-14.2 6.3-14.2 14.1 0 2.5.7 4.9 1.9 7L2 30.6l8.1-2.1c2 1.1 4.3 1.7 6.7 1.7 7.8 0 14.2-6.4 14.2-14.2 0-3.8-1.5-7.3-4.1-10A13.92 13.92 0 0 0 16 1.7zm7.9 20c-.3.9-2 1.9-2.8 2-.7.1-1.6.1-2.6-.2-.6-.2-1.3-.4-2.3-.9-4.1-1.8-6.8-5.9-7-6.2-.2-.3-1.7-2.2-1.7-4.2 0-2 .6-3.1.9-3.5.4-.4.8-.5 1.1-.5H11c.3 0 .6 0 .8.7.3.8 1.2 2.8 1.3 3 .1.2.2.4 0 .7l-.4.7c-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8s1.1 1.9 2.3 2.9c1.6 1.4 2.9 1.9 3.3 2.1.4.2.6.2.9-.1.3-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.3 1.1 2.7 1.3.4.2.7.3.8.4.1.2.1 1-.3 1.9z"
+				<article class="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-white/0 p-5 shadow-xl backdrop-blur">
+					<p class="text-xs font-semibold uppercase tracking-[0.3em] text-gtvorange">United Kingdom</p>
+					<h3 class="mt-3 text-2xl font-semibold text-white">UK Partners Hub</h3>
+					<p class="mt-2 text-sm leading-relaxed text-white/70">
+						If you are a partner, fleet operator or investor in the UK, we connect you with our local business development team to explore opportunities and tailored projects.
+					</p>
+					<ul class="mt-5 space-y-2 text-sm text-white/80">
+						<li>
+							<strong class="font-semibold text-white">Email:</strong> <span class="break-all">{CONTACT_EMAIL_UK}</span>
+						</li>
+						<li>
+							<strong class="font-semibold text-white">Phone:</strong> {CONTACT_PHONE_UK}
+						</li>
+					</ul>
+					<div class="mt-6 flex flex-wrap gap-3">
+						<a
+							href={`mailto:${CONTACT_EMAIL_UK}`}
+							class="rounded-2xl border border-white/20 px-5 py-2 text-sm font-medium text-white transition hover:border-gtvorange hover:text-gtvorange"
+						>
+							Email team
+						</a>
+						<a
+							href={WHATSAPP_LINK_UK}
+							class="group flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 text-white shadow-lg shadow-emerald-500/30 transition hover:-translate-y-0.5"
+							target="_blank"
+							rel="noreferrer"
+							aria-label="WhatsApp directo UK"
+						>
+							<svg viewBox="0 0 32 32" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+								<path
+									d="M16 1.7c-7.8 0-14.2 6.3-14.2 14.1 0 2.5.7 4.9 1.9 7L2 30.6l8.1-2.1c2 1.1 4.3 1.7 6.7 1.7 7.8 0 14.2-6.4 14.2-14.2 0-3.8-1.5-7.3-4.1-10A13.92 13.92 0 0 0 16 1.7zm7.9 20c-.3.9-2 1.9-2.8 2-.7.1-1.6.1-2.6-.2-.6-.2-1.3-.4-2.3-.9-4.1-1.8-6.8-5.9-7-6.2-.2-.3-1.7-2.2-1.7-4.2 0-2 .6-3.1.9-3.5.4-.4.8-.5 1.1-.5H11c.3 0 .6 0 .8.7.3.8 1.2 2.8 1.3 3 .1.2.2.4 0 .7l-.4.7c-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8s1.1 1.9 2.3 2.9c1.6 1.4 2.9 1.9 3.3 2.1.4.2.6.2 .9-.1.3-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.3 1.1 2.7 1.3.4.2.7.3.8.4.1.2.1 1-.3 1.9z"
 							/>
-						</svg>
-						<span class="sr-only">WhatsApp UK</span>
-					</a>
-				</div>
-			</article>
+							</svg>
+							<span class="sr-only">WhatsApp UK</span>
+						</a>
+					</div>
+				</article>
 			</div>
 		</section>
 
-		<footer class="rounded-2xl mobile-sm:rounded-3xl border border-white/10 bg-white/5 px-4 mobile-sm:px-6 mobile-lg:px-8 py-4 mobile-sm:py-5 mobile-lg:py-6 text-center text-[0.65rem] mobile-sm:text-xs text-white/60 backdrop-blur">
+		<footer class="rounded-3xl border border-white/10 bg-white/5 px-6 py-5 text-center text-xs text-white/60 backdrop-blur md:px-8 md:py-6">
 			<p>© {currentYear} GTVMOTOR</p>
-			<div class="mt-1.5 mobile-sm:mt-2 flex flex-col mobile-sm:flex-row items-center justify-center gap-2 mobile-sm:gap-4 text-xs mobile-sm:text-sm">
+			<div class="mt-2 flex flex-col items-center justify-center gap-2 text-sm md:flex-row md:gap-4">
 				<a href="https://gtvmotor.es" class="transition hover:text-white">gtvmotor.es</a>
-				<span aria-hidden="true" class="hidden mobile-sm:inline">·</span>
+				<span aria-hidden="true" class="hidden md:inline">·</span>
 				<a href="https://gtvmotor.co.uk" class="transition hover:text-white">gtvmotor.co.uk</a>
 			</div>
 		</footer>

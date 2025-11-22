@@ -4,13 +4,10 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,ts,tsx,md,mdx}'],
 	theme: {
 		screens: {
-			'mobile-sm': '330px',   // Mobile small: > 330px
-			'mobile': '481px',      // Mobile: > 480px
-			'mobile-lg': '601px',   // Mobile large: > 600px
-			'tablet': '835px',      // Tablet: > 834px
-			'tablet-lg': '1025px',  // Tablet: > 1024px
-			'laptop': '1441px',     // Laptop: > 1440px
-			'desktop': '1441px',    // Desktop: > 1440px
+			sm: '480px', // mobile confortable
+			md: '768px', // desktop base
+			lg: '1024px',
+			xl: '1441px', // desktop amplio
 		},
 		extend: {
 			colors: {
@@ -20,4 +17,3 @@ export default {
 		},
 	},
 } satisfies Config;
-
