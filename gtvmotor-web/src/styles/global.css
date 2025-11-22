@@ -1,0 +1,94 @@
+@reference "tailwindcss";
+@tailwind base;
+@tailwind utilities;
+
+body {
+	@apply bg-slate-950 text-slate-100 antialiased;
+}
+
+a {
+	@apply no-underline;
+}
+
+.typewriter {
+	display: inline-flex;
+	align-items: baseline;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 2px solid rgba(255, 255, 255, 0.9);
+	width: 0;
+	animation: typing 2.6s steps(22, end) forwards, caret 0.8s step-end infinite alternate;
+	animation-delay: var(--typewriter-delay, 0.6s),
+		calc(var(--typewriter-delay, 0.6s) + 2.6s);
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: var(--typewriter-width, 18ch);
+	}
+}
+
+@keyframes caret {
+	from {
+		border-color: transparent;
+	}
+	to {
+		border-color: rgba(255, 255, 255, 0.85);
+	}
+}
+
+.heart-draw {
+	display: inline-flex;
+	margin-left: 0.4rem;
+	font-size: 1.5rem;
+	line-height: 1;
+	opacity: 0;
+	transform: scale(0.6) translateY(6px);
+	color: #7e8cdd;
+	text-shadow: 0 0 12px rgba(249, 115, 22, 0.4);
+	animation: heart-pop 0.7s ease forwards;
+	animation-delay: var(--heart-delay, 3s);
+}
+
+@keyframes heart-pop {
+	0% {
+		opacity: 0;
+		transform: scale(0.5) translateY(10px);
+	}
+	60% {
+		opacity: 1;
+		transform: scale(1.2) translateY(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+	}
+}
+
+.reveal-line {
+	opacity: 0;
+	transform: translateY(12px);
+	animation: reveal 0.8s ease forwards;
+}
+
+.reveal-delay-0 {
+	animation-delay: 0.2s;
+}
+
+.reveal-delay-1 {
+	animation-delay: 0.8s;
+}
+
+@keyframes reveal {
+	from {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

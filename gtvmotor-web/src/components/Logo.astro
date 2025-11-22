@@ -1,0 +1,50 @@
+---
+type Size = 'sm' | 'md' | 'lg';
+
+interface Props {
+	size?: Size;
+	alt?: string;
+	useAsset?: boolean;
+	assetPath?: string;
+}
+
+const sizeMap: Record<Size, string> = {
+	sm: 'h-14 w-14 text-sm',
+	md: 'h-24 w-24 text-lg',
+	lg: 'h-36 w-36 text-xl',
+};
+
+const {
+	size = 'md',
+	alt = 'Logotipo GTVMOTOR',
+	useAsset = false,
+	assetPath = '/logo.png',
+} = Astro.props as Props;
+
+const dimension = sizeMap[size] ?? sizeMap.md;
+const assetPadding = useAsset ? 'p-3' : '';
+---
+
+<figure class="inline-flex flex-col items-center gap-3">
+	<div
+		class={`relative inline-flex items-center justify-center rounded-full bg-gradient-to-br from-gtvorange to-white/40 text-white shadow-xl shadow-gtvorange/30 ${dimension} ${assetPadding}`}
+		aria-label={alt}
+	>
+		{useAsset ? (
+			<img
+				src={assetPath}
+				alt={alt}
+				class="h-full w-full rounded-full object-contain"
+				loading="lazy"
+			/>
+		) : (
+			<span class="tracking-[0.4em] font-semibold">
+				GTV
+			</span>
+		)}
+	</div>
+	<figcaption class="text-xs uppercase tracking-[0.3em] text-white/70">
+		GTVMOTOR
+	</figcaption>
+</figure>
+
