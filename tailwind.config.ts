@@ -13,6 +13,7 @@ export default {
 			colors: {
 				gtvorange: '#f97316',
 				gtvgray: '#111827',
+				gtvblue: '#007bff',
 			},
 		},
 	},
